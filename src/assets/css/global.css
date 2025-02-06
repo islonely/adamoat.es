@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #181818;
+    color: white;
+    font-size: 12pt;
+}
+
+@font-face {
+    font-family: Brush;
+    src: url("/assets/fonts/james-stroker-font/JamesStroker-jEZMO.ttf");
+}
+
+@font-face {
+    font-family: "Ubuntu Mono";
+    font-style: normal;
+    font-weight: 4400;
+    src:
+        local("Ubuntu Mono"),
+        url("/assets/fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf");
+}
+
+@font-face {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: 100 1000;
+    src: url("/assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
+}
+
+svg {
+    width: 32px;
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #555;
+    border-radius: 5px;
+    width: max-content;
+    cursor: pointer;
+    transition: all 200ms;
+    color: #bbb;
+
+    &:hover {
+        color: white;
+        border-color: #888;
+        font-weight: 600;
+        padding-right: calc(1rem - 1px);
+    }
+}
