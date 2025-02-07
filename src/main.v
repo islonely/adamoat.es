@@ -11,8 +11,9 @@ fn main() {
 	mut app := &App{}
 	app.static_mime_types['.webmanifest'] = 'application/manifest+json'
 	app.mount_static_folder_at(@VMODROOT + '/src/assets', '/assets')!
-	spawn veb.run[App, Context](mut app, veb_port)
-	start_https_server()
+	veb.run[App, Context](mut app, veb_port)
+	// spawn veb.run[App, Context](mut app, veb_port)
+	// start_https_server()
 }
 
 fn start_https_server() {

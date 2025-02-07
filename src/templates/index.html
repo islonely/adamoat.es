@@ -15,10 +15,22 @@
             code {
                 --keyword: #617fe2;
                 --quote: #c67f69;
+                --quote-light: rgb(from var(--quote) calc(r + 15) calc(g + 15) calc(b + 15));
                 --number: #a4e5a4;
                 --name: #afe7ff;
                 --type: #50e6b6;
                 font-family: "Ubuntu Mono", monospace;
+
+                a {
+                    color: var(--quote);
+                    text-decoration: none;
+                    border-bottom: 1px solid var(--quote);
+                    transition: all 100ms;
+                    &:hover {
+                        color: var(--quote-light);
+                        border-bottom: 1.5px solid var(--quote-light)
+                    }
+                }
             }
 
             @property --angle {
@@ -325,9 +337,9 @@
             <code class="myself" style="font-size: 1.2em;">
                 <span style="color: var(--keyword);">mut</span> <span style="color: var(--name);">adam</span> := <span style="color: var(--type);">Person</span>{<br>
                     &emsp;&emsp;&emsp;<span style="color: var(--name);">name</span>: <span style="color: var(--quote);">'Adam Oates'</span><br>
-                    &emsp;&emsp;&emsp;<span style="color: var(--name);">age</span>: <span style="color: var(--number);"><script>document.write(years_since(Date.parse('2001-11-01')));</script></span><br>
+                    &emsp;&emsp;&emsp;<span style="color: var(--name);">tells_dad_jokes</span>: <span style="color: var(--keyword);">true</span><br>
                     &emsp;&emsp;&emsp;<span style="color: var(--name);">desc</span>: [<span style="color: var(--quote);">'National Guard'</span>,<br>
-                    &emsp;&emsp;&emsp;<span style="color: var(--quote);">'Christian'</span>, <span style="color: var(--quote);">'Hackerman'</span>]<br>
+                    &emsp;&emsp;&emsp;<span style="color: var(--quote);">'<a href="/salvation">Christian</a>'</span>, <span style="color: var(--quote);">'Hackerman'</span>]<br>
                 &#x7d;
             </code>
             
