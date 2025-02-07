@@ -16,7 +16,7 @@ fn main() {
 }
 
 fn start_https_server() {
-	rootca_path := '/etc/letsecrypt/live/adamoat.es/rootca.pem'
+	rootca_path := '/etc/letsencrypt/live/adamoat.es/rootca.pem'
 	cert_path := '/etc/letsencrypt/live/adamoat.es/cert.pem'
 	key_path := '/etc/letsencrypt/live/adamoat.es/privkey.pem'
 
